@@ -25,7 +25,7 @@ Use uma versão Godot 4.x. O projeto foi validado com Godot 4.6.
 
 ## Testar a fase
 
-Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Caminhe e salte pelas três plataformas até alcançar o portal azul da fase 1. Após um segundo, a fase 2 deve abrir. Alcance o portal azul da fase 2 para ver `Fase concluída!`. Feche e abra o jogo depois de chegar à fase 2: o botão **Continuar** deve abrir a fase 2.
+Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Na fase 1, colete a estrela dourada para liberar o portal azul. Após um segundo no portal, a fase 2 deve abrir. Alcance o portal azul da fase 2 para ver `Fase concluída!`. Feche e abra o jogo depois de chegar à fase 2: o botão **Continuar** deve abrir a fase 2.
 
 ## Onde localizar os principais arquivos
 
@@ -40,6 +40,7 @@ Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esque
 | `scripts/save_manager.gd` | Salvamento do último progresso de fase. |
 | `scripts/main_menu.gd` | Ações da tela inicial. |
 | `scenes/level_exit.tscn` | Portal de saída usado na fase de testes. |
+| `scenes/collectible.tscn` | Item coletável usado para liberar o portal da fase 1. |
 | `docs/` | Guias de desenvolvimento em português. |
 
 ## Como iniciar o desenvolvimento

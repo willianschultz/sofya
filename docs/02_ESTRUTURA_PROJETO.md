@@ -7,10 +7,12 @@ SOFYA/
 ├── scenes/
 │   ├── main.tscn
 │   ├── main_menu.tscn
+│   ├── collectible.tscn
 │   ├── level_02.tscn
 │   ├── level_exit.tscn
 │   └── player.tscn
 ├── scripts/
+│   ├── collectible.gd
 │   ├── level_exit.gd
 │   ├── main.gd
 │   ├── main_menu.gd
@@ -63,6 +65,14 @@ SOFYA/
 **Relacionados:** `scenes/main.tscn`, `scenes/level_exit.tscn` e `scenes/player.tscn`.  
 **Quando modificar:** ao ajustar a segunda fase ou ao usá-la como modelo para uma fase nova.
 
+### `scenes/collectible.tscn` e `scripts/collectible.gd`
+
+**Local:** `scenes/` e `scripts/`.
+**Finalidade:** representar um item que a Sofya pode coletar.
+**Responsabilidades:** detectar a Sofya, emitir o sinal `collected` e desaparecer após a coleta.
+**Relacionados:** `scenes/main.tscn`, `scripts/main.gd` e `docs/04_CRIANDO_FASES.md`.
+**Quando modificar:** ao adicionar tipos de item ou alterar o efeito de uma coleta.
+
 ### `scenes/player.tscn`
 
 **Local:** `scenes/`.  
@@ -91,7 +101,7 @@ SOFYA/
 
 **Local:** `scenes/` e `scripts/`.
 **Finalidade:** disponibilizar e controlar o portal de saída.
-**Responsabilidades:** detectar a entrada da Sofya, mostrar uma mensagem de conclusão e, quando configurada, abrir a próxima cena.
+**Responsabilidades:** detectar a entrada da Sofya, permanecer bloqueada quando exigir item, mostrar uma mensagem de conclusão e, quando configurada, abrir a próxima cena.
 **Relacionados:** `scenes/main.tscn` e `docs/04_CRIANDO_FASES.md`.
 **Quando modificar:** ao ajustar posição, aparência ou a ação que deverá ocorrer ao concluir uma fase.
 
