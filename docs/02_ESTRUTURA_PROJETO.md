@@ -6,12 +6,14 @@ SOFYA/
 ├── README.md
 ├── scenes/
 │   ├── main.tscn
+│   ├── main_menu.tscn
 │   ├── level_02.tscn
 │   ├── level_exit.tscn
 │   └── player.tscn
 ├── scripts/
 │   ├── level_exit.gd
 │   ├── main.gd
+│   ├── main_menu.gd
 │   ├── player.gd
 │   └── save_manager.gd
 └── docs/
@@ -44,6 +46,14 @@ SOFYA/
 **Responsabilidades:** posicionar a Sofya, plataformas, chão, texto de controles e transição para a fase 2.  
 **Relacionados:** `scenes/player.tscn`.  
 **Quando modificar:** ao criar ou ajustar a fase.
+
+### `scenes/main_menu.tscn` e `scripts/main_menu.gd`
+
+**Local:** `scenes/` e `scripts/`.
+**Finalidade:** apresentar o primeiro ponto de interação do jogo.
+**Responsabilidades:** iniciar jogo novo, continuar progresso salvo e solicitar confirmação antes de apagar esse progresso.
+**Relacionados:** `project.godot`, `scripts/save_manager.gd` e `docs/05_INTERFACE.md`.
+**Quando modificar:** ao alterar opções da tela inicial ou o fluxo de entrada no jogo.
 
 ### `scenes/level_02.tscn`
 

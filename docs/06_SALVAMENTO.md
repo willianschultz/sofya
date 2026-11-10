@@ -24,10 +24,10 @@ O arquivo é `user://savegame.json`. O prefixo `user://` representa a pasta de d
 
 ## Como testar o carregamento
 
-1. Execute o projeto e alcance o portal da fase 1.
+1. Execute o projeto e clique em **Novo jogo**.
 2. Confirme que a fase 2 abriu.
 3. Feche o jogo e execute-o de novo com F5.
-4. A fase 2 deve abrir automaticamente.
+4. O botão **Continuar** deve aparecer e abrir a fase 2.
 5. Para testar o começo novamente, feche o jogo e apague `savegame.json` na Pasta de Dados do Usuário.
 
 ## Como adicionar novos campos

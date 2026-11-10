@@ -47,6 +47,10 @@ func load_last_unlocked_level() -> String:
 	return DEFAULT_LEVEL_PATH
 
 
+func has_saved_progress() -> bool:
+	return load_last_unlocked_level() != DEFAULT_LEVEL_PATH
+
+
 func clear_progress() -> void:
 	if FileAccess.file_exists(SAVE_PATH):
 		DirAccess.remove_absolute(SAVE_PATH)
