@@ -18,6 +18,8 @@ SOFYA/
 │   ├── main_menu.gd
 │   ├── player.gd
 │   └── save_manager.gd
+├── tools/
+│   └── setup_windows.ps1
 └── docs/
     ├── README.md
     ├── 01_CONCEITOS_GODOT.md
@@ -28,7 +30,8 @@ SOFYA/
     ├── 06_SALVAMENTO.md
     ├── 07_ANDROID_IOS.md
     ├── 08_MANUTENCAO.md
-    └── 09_PROXIMAS_ETAPAS.md
+    ├── 09_PROXIMAS_ETAPAS.md
+    └── 10_INSTALACAO_WINDOWS.md
 ```
 
 ## Arquivos relevantes
@@ -111,3 +114,11 @@ SOFYA/
 **Finalidade:** explicar a Godot e as decisões do projeto em português.  
 **Responsabilidades:** manter instruções atualizadas para desenvolvimento e manutenção.  
 **Quando modificar:** junto com qualquer funcionalidade documentada.
+
+### `tools/setup_windows.ps1`
+
+**Local:** `tools/`.
+**Finalidade:** instalar Git e Godot no Windows e clonar ou atualizar o projeto local.
+**Responsabilidades:** usar o gerenciador `winget`, proteger uma pasta que não seja repositório e abrir a pasta preparada.
+**Relacionados:** `docs/10_INSTALACAO_WINDOWS.md`.
+**Quando modificar:** ao mudar programas necessários ou o endereço oficial do repositório.

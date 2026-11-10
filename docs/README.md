@@ -15,6 +15,8 @@ O projeto usa **Godot 4.6** e **GDScript**. GDScript é a linguagem própria da 
 
 Use uma versão Godot 4.x. O projeto foi validado com Godot 4.6.
 
+Para Windows, siga o guia detalhado em [10_INSTALACAO_WINDOWS.md](10_INSTALACAO_WINDOWS.md). Ele também oferece um instalador PowerShell que clona o projeto em `C:\Projetos\Sofya`.
+
 ## Abrir e executar
 
 1. Abra a Godot e clique em **Importar**.
@@ -54,3 +56,4 @@ Abra primeiro `scenes/main.tscn`, execute-a e observe a árvore de nós à esque
 3. [03_MOVIMENTACAO.md](03_MOVIMENTACAO.md)
 4. [04_CRIANDO_FASES.md](04_CRIANDO_FASES.md)
 5. [09_PROXIMAS_ETAPAS.md](09_PROXIMAS_ETAPAS.md)
+6. [10_INSTALACAO_WINDOWS.md](10_INSTALACAO_WINDOWS.md)
