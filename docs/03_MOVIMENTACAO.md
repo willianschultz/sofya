@@ -8,7 +8,7 @@ O script `scripts/player.gd` concentra toda a movimentação. Selecione o nó **
 | `Run Speed` | pixels por segundo | 280 | Velocidade ao manter Shift. |
 | `Acceleration` | pixels por segundo² | 1400 | Rapidez para alcançar a velocidade desejada. |
 | `Deceleration` | pixels por segundo² | 1800 | Rapidez para parar. |
-| `Jump Velocity` | pixels por segundo | -390 | Impulso vertical do salto. Mais negativo significa salto mais alto. |
+| `Jump Velocity` | pixels por segundo | -540 | Impulso vertical do salto. Mais negativo significa salto mais alto. |
 | `Standing Height` | pixels | 48 | Altura da colisão em pé. |
 | `Crouching Height` | pixels | 30 | Altura da colisão agachada. |
 

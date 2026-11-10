@@ -14,7 +14,7 @@ extends CharacterBody2D
 @export var run_speed: float = 280.0
 @export var acceleration: float = 1_400.0
 @export var deceleration: float = 1_800.0
-@export var jump_velocity: float = -390.0
+@export var jump_velocity: float = -540.0
 
 @export_category("Agachamento")
 @export var standing_height: float = 48.0
