@@ -31,5 +31,6 @@ func on_body_entered(body: Node2D) -> void:
 	set_deferred("monitoring", false)
 
 	if not next_scene_path.is_empty():
+		SaveManager.save_last_unlocked_level(next_scene_path)
 		await get_tree().create_timer(transition_delay).timeout
 		get_tree().change_scene_to_file(next_scene_path)

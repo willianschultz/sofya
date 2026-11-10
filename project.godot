@@ -6,6 +6,9 @@ config_version=5
 config/name="SOFYA"
 run/main_scene="res://scenes/main.tscn"
 
+[autoload]
+SaveManager="*res://scripts/save_manager.gd"
+
 [display]
 
 [display/window]

@@ -1,28 +1,39 @@
 # Salvamento
 
-O jogo já possui duas fases, mas ainda **não salva dados**. A transição acontece somente durante a execução atual. Isso evita criar um sistema antes de validar a experiência das fases.
+O SOFYA salva somente o último progresso alcançado. Ao atravessar o portal da fase 1, o jogo registra que a fase 2 está desbloqueada. Na próxima abertura, o jogo inicia diretamente na fase 2.
 
-Quando o jogo precisar salvar progresso, use `FileAccess` da Godot para gravar um dicionário convertido em JSON no caminho `user://savegame.json`. `user://` é uma pasta própria do aplicativo e funciona em desktop e mobile.
+## Onde está a implementação
 
-## Informações recomendadas
+O script global `scripts/save_manager.gd` está configurado como **Autoload** em `project.godot`. Isso significa que a Godot cria um único `SaveManager` para todo o jogo. O script `scripts/main.gd`, ligado à primeira cena, pergunta a esse gerenciador qual fase deve abrir.
 
-Comece apenas com dados necessários, por exemplo:
+## Onde os dados são armazenados
 
-```gdscript
-var save_data := {
-    "save_version": 1,
-    "unlocked_levels": ["level_01"],
-    "last_level": "level_01"
+O arquivo é `user://savegame.json`. O prefixo `user://` representa a pasta de dados do aplicativo no computador ou celular, sem gravar dentro da pasta do projeto. Na Godot, use **Projeto > Ferramentas > Abrir Pasta de Dados do Usuário** para localizá-la.
+
+## Informações salvas
+
+```json
+{
+  "save_version": 1,
+  "last_unlocked_level_path": "res://scenes/level_02.tscn"
 }
 ```
 
-## Adicionar campos
+- `save_version`: versão da estrutura do arquivo.
+- `last_unlocked_level_path`: caminho da última fase desbloqueada.
 
-1. Adicione um campo com valor padrão ao dicionário.
-2. Ao carregar, trate a ausência do campo com `data.get("novo_campo", valor_padrao)`.
-3. Aumente `save_version` se o significado de dados antigos mudar.
-4. Teste salvar, fechar o jogo e abrir novamente.
+## Como testar o carregamento
 
-## Evitar incompatibilidades
+1. Execute o projeto e alcance o portal da fase 1.
+2. Confirme que a fase 2 abriu.
+3. Feche o jogo e execute-o de novo com F5.
+4. A fase 2 deve abrir automaticamente.
+5. Para testar o começo novamente, feche o jogo e apague `savegame.json` na Pasta de Dados do Usuário.
 
-Nunca presuma que todo arquivo salvo possui todos os campos atuais. Mantenha `save_version`, use valores padrão e prefira adicionar campos a renomear ou remover dados existentes. Quando o sistema for implementado, este documento, `02_ESTRUTURA_PROJETO.md` e a documentação do script deverão ser atualizados juntos.
+## Como adicionar novos campos
+
+Adicione o valor ao dicionário `save_data` em `save_last_unlocked_level`. Ao ler, use `parsed_data.get("nome_do_campo", valor_padrao)`. Assim, arquivos antigos que ainda não possuem o novo campo continuam válidos.
+
+## Evitar incompatibilidades futuras
+
+Não remova nem renomeie campos já publicados sem uma migração. Aumente `SAVE_VERSION` quando a estrutura mudar. A versão atual também recusa um arquivo produzido por uma versão futura do jogo, usando o começo como alternativa segura.

@@ -11,7 +11,9 @@ SOFYA/
 │   └── player.tscn
 ├── scripts/
 │   ├── level_exit.gd
-│   └── player.gd
+│   ├── main.gd
+│   ├── player.gd
+│   └── save_manager.gd
 └── docs/
     ├── README.md
     ├── 01_CONCEITOS_GODOT.md
@@ -66,6 +68,14 @@ SOFYA/
 **Responsabilidades:** ler comandos, aplicar gravidade, andar, correr, saltar e agachar.  
 **Relacionados:** `scenes/player.tscn` e `docs/03_MOVIMENTACAO.md`.  
 **Quando modificar:** ao alterar regras de movimento.
+
+### `scripts/main.gd` e `scripts/save_manager.gd`
+
+**Local:** `scripts/`.
+**Finalidade:** abrir o último progresso e guardar a fase desbloqueada.
+**Responsabilidades:** `main.gd` consulta o progresso ao iniciar; `save_manager.gd` lê e grava o arquivo JSON.
+**Relacionados:** `project.godot`, `scenes/main.tscn`, `scripts/level_exit.gd` e `docs/06_SALVAMENTO.md`.
+**Quando modificar:** ao adicionar novos dados persistentes ou mudar a forma de iniciar o jogo.
 
 ### `scenes/level_exit.tscn` e `scripts/level_exit.gd`
 
