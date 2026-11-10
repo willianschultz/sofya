@@ -12,7 +12,9 @@
 | Criar inimigo | Etapa futura: comece com uma cena simples, colisão e uma regra de movimento testável. |
 | Alterar vida | Etapa futura: crie primeiro a regra de dano, depois a interface e por fim o salvamento se necessário. |
 | Adicionar fase | Duplique `level_02.tscn`, ajuste plataformas e defina `Next Scene Path` do portal anterior. Veja [04_CRIANDO_FASES.md](04_CRIANDO_FASES.md). |
-| Adicionar item | Arraste `collectible.tscn` para a fase e conecte o sinal `collected` no script da fase. |
+| Adicionar item | Arraste `collectible.tscn` para a fase, acrescente-o à lista `collectibles` do script da fase e conecte o sinal `collected`. |
+| Criar obstáculo | Arraste `hazard.tscn` para a fase e conecte `player_touched` no script da fase. |
+| Alterar a vida | Selecione Player e ajuste `Max Health` no Inspector. |
 | Reiniciar progresso | Feche o jogo e apague `savegame.json` na Pasta de Dados do Usuário. |
 | Alterar tela inicial | Abra `main_menu.tscn`; os botões ficam dentro de `Content`. |
 | Modificar objetivo | Altere o texto em `Interface/Objective`, o item e a configuração do nó `Exit` em `main.tscn`. |

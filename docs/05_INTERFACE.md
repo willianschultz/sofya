@@ -1,6 +1,6 @@
 # Interface
 
-A interface atual tem três partes pequenas. `scenes/main_menu.tscn` é a tela inicial; o nó `Interface` em `scenes/main.tscn` é um `CanvasLayer` que contém os textos `Instructions` e `Objective`; e a confirmação `Fase concluída!` fica no portal em `scenes/level_exit.tscn`. `CanvasLayer` mantém o texto fixo na tela mesmo quando a câmera se move.
+A interface atual tem três partes pequenas. `scenes/main_menu.tscn` é a tela inicial; o nó `Interface` em `scenes/main.tscn` é um `CanvasLayer` que contém os textos `Instructions`, `Objective` e `Health`; e a confirmação `Fase concluída!` fica no portal em `scenes/level_exit.tscn`. O texto `Objective` mostra a quantidade de estrelas coletadas na fase 1 e `Health` mostra as vidas. `CanvasLayer` mantém o texto fixo na tela mesmo quando a câmera se move.
 
 ## Tela inicial
 

@@ -8,11 +8,13 @@ SOFYA/
 │   ├── main.tscn
 │   ├── main_menu.tscn
 │   ├── collectible.tscn
+│   ├── hazard.tscn
 │   ├── level_02.tscn
 │   ├── level_exit.tscn
 │   └── player.tscn
 ├── scripts/
 │   ├── collectible.gd
+│   ├── hazard.gd
 │   ├── level_exit.gd
 │   ├── main.gd
 │   ├── main_menu.gd
@@ -75,6 +77,14 @@ SOFYA/
 **Responsabilidades:** detectar a Sofya, emitir o sinal `collected` e desaparecer após a coleta.
 **Relacionados:** `scenes/main.tscn`, `scripts/main.gd` e `docs/04_CRIANDO_FASES.md`.
 **Quando modificar:** ao adicionar tipos de item ou alterar o efeito de uma coleta.
+
+### `scenes/hazard.tscn` e `scripts/hazard.gd`
+
+**Local:** `scenes/` e `scripts/`.
+**Finalidade:** representar um obstáculo de contato, atualmente os espinhos.
+**Responsabilidades:** detectar a Sofya e avisar a fase sobre o dano.
+**Relacionados:** `scenes/main.tscn`, `scripts/main.gd` e `scripts/player.gd`.
+**Quando modificar:** ao ajustar área de dano, aparência ou adicionar outro tipo simples de obstáculo.
 
 ### `scenes/player.tscn`
 

@@ -11,6 +11,7 @@ O script `scripts/player.gd` concentra toda a movimentação. Selecione o nó **
 | `Jump Velocity` | pixels por segundo | -540 | Impulso vertical do salto. Mais negativo significa salto mais alto. |
 | `Standing Height` | pixels | 48 | Altura da colisão em pé. |
 | `Crouching Height` | pixels | 30 | Altura da colisão agachada. |
+| `Max Health` | vidas | 3 | Quantidade de contatos com obstáculo permitidos antes de reiniciar a fase. |
 
 ## Andar e correr
 
@@ -47,3 +48,7 @@ elif not head_clearance.is_colliding():
 ## Colisões
 
 `move_and_slide()` deve ser chamado depois de definir `velocity`. Ele usa o `CollisionShape2D` da Sofya e os `StaticBody2D` das plataformas. Para corrigir uma colisão, confira se cada plataforma possui ambos: um `StaticBody2D` e um filho `CollisionShape2D` com uma forma válida.
+
+## Vidas e retorno ao início
+
+Sofya começa cada fase com `Max Health` vidas. Ao tocar um obstáculo, o script da fase chama `take_damage()` e, se ainda houver vida, `respawn()` devolve a personagem à posição inicial. Ao acabar as vidas, a fase é reiniciada. O valor fica exposto no Inspector do nó `Player`.

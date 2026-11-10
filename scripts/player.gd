@@ -4,6 +4,7 @@
 ## - Movimentação horizontal e corrida.
 ## - Aplicação da gravidade e salto.
 ## - Agachamento com verificação de espaço sobre a personagem.
+## - Controle da posição inicial e das vidas da personagem.
 ##
 ## Cena relacionada: scenes/player.tscn
 ## Documentação: docs/03_MOVIMENTACAO.md
@@ -20,12 +21,22 @@ extends CharacterBody2D
 @export var standing_height: float = 48.0
 @export var crouching_height: float = 30.0
 
+@export_category("Vida")
+@export var max_health: int = 3
+
 @onready var body_collision: CollisionShape2D = $CollisionShape2D
 @onready var visual: Polygon2D = $Visual
 @onready var head_clearance: RayCast2D = $HeadClearance
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_crouching: bool = false
+var current_health: int = 0
+var spawn_position: Vector2
+
+
+func _ready() -> void:
+	spawn_position = global_position
+	current_health = max_health
 
 
 func _physics_process(delta: float) -> void:
@@ -79,3 +90,12 @@ func set_crouching(should_crouch: bool) -> void:
 	body_collision.position.y = (standing_height - body_height) / 2.0
 	visual.scale.y = body_height / standing_height
 	visual.position.y = (standing_height - body_height) / 2.0
+
+
+func take_damage() -> void:
+	current_health = max(current_health - 1, 0)
+
+
+func respawn() -> void:
+	global_position = spawn_position
+	velocity = Vector2.ZERO

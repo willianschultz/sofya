@@ -27,7 +27,7 @@ Para Windows, siga o guia detalhado em [10_INSTALACAO_WINDOWS.md](10_INSTALACAO_
 
 ## Testar a fase
 
-Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Na fase 1, colete a estrela dourada para liberar o portal azul. Após um segundo no portal, a fase 2 deve abrir. Alcance o portal azul da fase 2 para ver `Fase concluída!`. Feche e abra o jogo depois de chegar à fase 2: o botão **Continuar** deve abrir a fase 2.
+Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Na fase 1, colete as três estrelas douradas para liberar o portal azul. O contador no alto da tela deve passar de `0/3` para `3/3`. Evite os espinhos vermelhos: cada contato remove uma vida e devolve Sofya ao início. Após um segundo no portal, a fase 2 deve abrir. Alcance o portal azul da fase 2 para ver `Fase concluída!`. Feche e abra o jogo depois de chegar à fase 2: o botão **Continuar** deve abrir a fase 2.
 
 ## Onde localizar os principais arquivos
 
@@ -43,6 +43,7 @@ Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esque
 | `scripts/main_menu.gd` | Ações da tela inicial. |
 | `scenes/level_exit.tscn` | Portal de saída usado na fase de testes. |
 | `scenes/collectible.tscn` | Item coletável usado para liberar o portal da fase 1. |
+| `scenes/hazard.tscn` | Espinhos que removem uma vida ao toque. |
 | `docs/` | Guias de desenvolvimento em português. |
 
 ## Como iniciar o desenvolvimento
