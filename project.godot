@@ -1,0 +1,44 @@
+; Projeto SOFYA - Godot 4
+; Os comandos abaixo podem ser alterados em Projeto > Configurações do Projeto > Mapa de Entrada.
+config_version=5
+
+[application]
+config/name="SOFYA"
+run/main_scene="res://scenes/main.tscn"
+
+[display]
+
+[display/window]
+size/viewport_width=1152
+size/viewport_height=648
+size/window_width_override=1152
+size/window_height_override=648
+stretch/mode="canvas_items"
+
+[input]
+
+move_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"physical_keycode":65), Object(InputEventKey,"physical_keycode":4194311)]
+}
+move_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"physical_keycode":68), Object(InputEventKey,"physical_keycode":4194313)]
+}
+run={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"physical_keycode":4194325), Object(InputEventKey,"physical_keycode":4194326)]
+}
+jump={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"physical_keycode":32)]
+}
+crouch={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"physical_keycode":83), Object(InputEventKey,"physical_keycode":4194322)]
+}
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false

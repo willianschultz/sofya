@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_player"]
+
+[sub_resource type="RectangleShape2D" id="FloorShape"]
+size = Vector2(1800, 64)
+
+[sub_resource type="RectangleShape2D" id="PlatformOneShape"]
+size = Vector2(260, 32)
+
+[sub_resource type="RectangleShape2D" id="PlatformTwoShape"]
+size = Vector2(220, 32)
+
+[sub_resource type="RectangleShape2D" id="PlatformThreeShape"]
+size = Vector2(180, 32)
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-400, -400, 1800, -400, 1800, 1000, -400, 1000)
+color = Color(0.055, 0.071, 0.145, 1)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(500, 580)
+
+[node name="Visual" type="Polygon2D" parent="Floor"]
+polygon = PackedVector2Array(-900, -32, 900, -32, 900, 32, -900, 32)
+color = Color(0.19, 0.35, 0.38, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("FloorShape")
+
+[node name="PlatformOne" type="StaticBody2D" parent="."]
+position = Vector2(450, 440)
+
+[node name="Visual" type="Polygon2D" parent="PlatformOne"]
+polygon = PackedVector2Array(-130, -16, 130, -16, 130, 16, -130, 16)
+color = Color(0.28, 0.58, 0.5, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformOne"]
+shape = SubResource("PlatformOneShape")
+
+[node name="PlatformTwo" type="StaticBody2D" parent="."]
+position = Vector2(800, 340)
+
+[node name="Visual" type="Polygon2D" parent="PlatformTwo"]
+polygon = PackedVector2Array(-110, -16, 110, -16, 110, 16, -110, 16)
+color = Color(0.31, 0.64, 0.55, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformTwo"]
+shape = SubResource("PlatformTwoShape")
+
+[node name="PlatformThree" type="StaticBody2D" parent="."]
+position = Vector2(1100, 250)
+
+[node name="Visual" type="Polygon2D" parent="PlatformThree"]
+polygon = PackedVector2Array(-90, -16, 90, -16, 90, 16, -90, 16)
+color = Color(0.36, 0.69, 0.59, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformThree"]
+shape = SubResource("PlatformThreeShape")
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(140, 400)
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="Instructions" type="Label" parent="Interface"]
+offset_left = 24.0
+offset_top = 20.0
+theme_override_colors/font_color = Color(0.9, 0.96, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SOFYA — fase de testes\nA / ← e D / →: andar   Shift: correr   Espaço: saltar   S / ↓: agachar"
