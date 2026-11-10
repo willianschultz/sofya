@@ -25,7 +25,7 @@ Use uma versão Godot 4.x. O projeto foi validado com Godot 4.6.
 
 ## Testar a fase
 
-Execute com **F6** ou **F5**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Caminhe e salte pelas três plataformas até alcançar o portal azul. A câmera deve acompanhar Sofya e o texto `Fase concluída!` deve aparecer ao tocar o portal.
+Execute com **F6** ou **F5**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Caminhe e salte pelas três plataformas até alcançar o portal azul da fase 1. Após um segundo, a fase 2 deve abrir. Alcance o portal azul da fase 2 para ver `Fase concluída!`.
 
 ## Onde localizar os principais arquivos
 
@@ -33,6 +33,7 @@ Execute com **F6** ou **F5**. Use `A`/seta esquerda e `D`/seta direita para anda
 | --- | --- |
 | `project.godot` | Configuração do projeto e comandos de entrada. |
 | `scenes/main.tscn` | Fase principal de testes. |
+| `scenes/level_02.tscn` | Segunda fase curta, aberta pelo portal da primeira. |
 | `scenes/player.tscn` | Corpo, colisão, câmera e desenho provisório da Sofya. |
 | `scripts/player.gd` | Regras de movimento da Sofya. |
 | `scenes/level_exit.tscn` | Portal de saída usado na fase de testes. |

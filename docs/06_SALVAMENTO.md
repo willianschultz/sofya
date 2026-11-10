@@ -1,6 +1,6 @@
 # Salvamento
 
-Esta primeira entrega **não salva dados**. Não há progresso, fases concluídas, vida ou configurações persistentes para registrar ainda. Isso evita criar um sistema antes de existir informação real para salvar.
+O jogo já possui duas fases, mas ainda **não salva dados**. A transição acontece somente durante a execução atual. Isso evita criar um sistema antes de validar a experiência das fases.
 
 Quando o jogo precisar salvar progresso, use `FileAccess` da Godot para gravar um dicionário convertido em JSON no caminho `user://savegame.json`. `user://` é uma pasta própria do aplicativo e funciona em desktop e mobile.
 

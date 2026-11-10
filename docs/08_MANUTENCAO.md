@@ -11,7 +11,7 @@
 | Adicionar animação | Crie `AnimatedSprite2D` ou `AnimationPlayer` após definir os sprites disponíveis. |
 | Criar inimigo | Etapa futura: comece com uma cena simples, colisão e uma regra de movimento testável. |
 | Alterar vida | Etapa futura: crie primeiro a regra de dano, depois a interface e por fim o salvamento se necessário. |
-| Adicionar fase | Siga [04_CRIANDO_FASES.md](04_CRIANDO_FASES.md). |
+| Adicionar fase | Duplique `level_02.tscn`, ajuste plataformas e defina `Next Scene Path` do portal anterior. Veja [04_CRIANDO_FASES.md](04_CRIANDO_FASES.md). |
 | Modificar objetivo | Altere o texto em `Interface/Instructions` de `main.tscn` e a posição do nó `Exit`. |
 | Corrigir colisão | Confira `StaticBody2D` + `CollisionShape2D` e use formas de colisão visíveis. |
 

@@ -6,6 +6,7 @@ SOFYA/
 ├── README.md
 ├── scenes/
 │   ├── main.tscn
+│   ├── level_02.tscn
 │   ├── level_exit.tscn
 │   └── player.tscn
 ├── scripts/
@@ -37,10 +38,18 @@ SOFYA/
 ### `scenes/main.tscn`
 
 **Local:** `scenes/`.  
-**Finalidade:** fase de testes atual.  
-**Responsabilidades:** posicionar a Sofya, plataformas, chão e texto de controles.  
+**Finalidade:** primeira fase de testes.  
+**Responsabilidades:** posicionar a Sofya, plataformas, chão, texto de controles e transição para a fase 2.  
 **Relacionados:** `scenes/player.tscn`.  
 **Quando modificar:** ao criar ou ajustar a fase.
+
+### `scenes/level_02.tscn`
+
+**Local:** `scenes/`.  
+**Finalidade:** segunda fase curta da demonstração.  
+**Responsabilidades:** oferecer uma nova disposição de plataformas e a conclusão visual final.  
+**Relacionados:** `scenes/main.tscn`, `scenes/level_exit.tscn` e `scenes/player.tscn`.  
+**Quando modificar:** ao ajustar a segunda fase ou ao usá-la como modelo para uma fase nova.
 
 ### `scenes/player.tscn`
 
@@ -62,7 +71,7 @@ SOFYA/
 
 **Local:** `scenes/` e `scripts/`.
 **Finalidade:** disponibilizar e controlar o portal de saída.
-**Responsabilidades:** detectar a entrada da Sofya e mostrar uma mensagem de conclusão.
+**Responsabilidades:** detectar a entrada da Sofya, mostrar uma mensagem de conclusão e, quando configurada, abrir a próxima cena.
 **Relacionados:** `scenes/main.tscn` e `docs/04_CRIANDO_FASES.md`.
 **Quando modificar:** ao ajustar posição, aparência ou a ação que deverá ocorrer ao concluir uma fase.
 

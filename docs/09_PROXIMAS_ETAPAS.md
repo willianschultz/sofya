@@ -4,7 +4,7 @@ Este arquivo registra a sequência de trabalho para que o projeto possa ser reto
 
 ## Estado atual
 
-A fase de testes possui movimentação, plataformas, câmera e saída visual. O portal apenas confirma a conclusão; não troca de fase nem salva dados.
+A demonstração possui duas fases curtas, movimentação, plataformas, câmera e saída visual. O portal da fase 1 abre a fase 2; o portal final confirma a conclusão. Ainda não há salvamento.
 
 ## Próxima validação necessária
 
@@ -12,10 +12,10 @@ Antes de expandir sistemas, faça o teste manual descrito em `README.md`: confir
 
 ## Próxima implementação sugerida
 
-Após a validação manual, criar uma segunda fase curta e fazer o portal abrir essa fase. Essa etapa deve incluir somente:
+Após a validação manual, iniciar um salvamento simples de progresso. Essa etapa deve incluir somente:
 
-1. `level_01.tscn` e uma cópia simples para a segunda fase.
-2. Uma transição explícita entre cenas.
-3. Atualização do guia de criação de fases.
+1. Registrar que a fase 2 foi alcançada.
+2. Carregar a última fase disponível ao iniciar o jogo.
+3. Atualizar o guia de salvamento e testar fechar e abrir o jogo.
 
-O sistema de salvamento só deve ser iniciado quando houver fases concluídas para registrar. Inimigos, animações definitivas, mapas complexos e controles mobile permanecem fora desta sequência até que a base seja aprovada.
+Inimigos, animações definitivas, mapas complexos e controles mobile permanecem fora desta sequência até que a base seja aprovada.
