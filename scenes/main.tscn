@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://scripts/main.gd" id="3_main"]
 [ext_resource type="PackedScene" path="res://scenes/collectible.tscn" id="4_collectible"]
 [ext_resource type="PackedScene" path="res://scenes/hazard.tscn" id="5_hazard"]
+[ext_resource type="PackedScene" path="res://scenes/enemy.tscn" id="6_enemy"]
 
 [sub_resource type="RectangleShape2D" id="FloorShape"]
 size = Vector2(1800, 64)
@@ -84,6 +85,9 @@ position = Vector2(1050, 200)
 
 [node name="Hazard" parent="." instance=ExtResource("5_hazard")]
 position = Vector2(630, 524)
+
+[node name="Enemy" parent="." instance=ExtResource("6_enemy")]
+position = Vector2(900, 528)
 
 [node name="Interface" type="CanvasLayer" parent="."]
 

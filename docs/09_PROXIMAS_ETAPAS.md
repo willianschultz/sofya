@@ -4,7 +4,7 @@ Este arquivo registra a sequência de trabalho para que o projeto possa ser reto
 
 ## Estado atual
 
-A demonstração possui duas fases curtas, movimentação, plataformas, câmera, saída visual, três itens coletáveis, um obstáculo simples, vidas, salvamento da última fase desbloqueada e tela inicial. O portal da fase 1 exige as estrelas, abre a fase 2 e o portal final confirma a conclusão.
+A demonstração possui duas fases curtas, movimentação, plataformas, câmera, saída visual, três itens coletáveis, espinhos, um inimigo de patrulha, vidas, salvamento da última fase desbloqueada e tela inicial. O portal da fase 1 exige as estrelas, abre a fase 2 e o portal final confirma a conclusão.
 
 ## Próxima validação necessária
 
@@ -16,6 +16,6 @@ Após a validação manual, definir a próxima funcionalidade com base no teste.
 
 1. Ajustes de controles, colisões e valores de movimentação.
 2. Melhorias visuais temporárias para leitura das fases.
-3. Um inimigo simples, caso o teste confirme que os espinhos e as vidas têm comportamento claro.
+3. Ajustes de posição, velocidade e quantidade dos inimigos conforme o teste manual.
 
 Inimigos, animações definitivas, mapas complexos e controles mobile permanecem fora desta sequência até que a base seja aprovada.

@@ -14,6 +14,7 @@
 | Adicionar fase | Duplique `level_02.tscn`, ajuste plataformas e defina `Next Scene Path` do portal anterior. Veja [04_CRIANDO_FASES.md](04_CRIANDO_FASES.md). |
 | Adicionar item | Arraste `collectible.tscn` para a fase, acrescente-o à lista `collectibles` do script da fase e conecte o sinal `collected`. |
 | Criar obstáculo | Arraste `hazard.tscn` para a fase e conecte `player_touched` no script da fase. |
+| Criar inimigo | Arraste `enemy.tscn` para a fase e ajuste `Patrol Speed` e `Patrol Distance` no Inspector. |
 | Alterar a vida | Selecione Player e ajuste `Max Health` no Inspector. |
 | Reiniciar progresso | Feche o jogo e apague `savegame.json` na Pasta de Dados do Usuário. |
 | Alterar tela inicial | Abra `main_menu.tscn`; os botões ficam dentro de `Content`. |

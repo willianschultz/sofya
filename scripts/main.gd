@@ -10,6 +10,7 @@ extends Node2D
 @onready var objective_label: Label = $Interface/Objective
 @onready var health_label: Label = $Interface/Health
 @onready var hazard = $Hazard
+@onready var enemy = $Enemy
 
 var collectibles: Array = []
 var collected_count: int = 0
@@ -26,7 +27,8 @@ func _ready() -> void:
 	for collectible in collectibles:
 		collectible.collected.connect(on_collectible_collected)
 
-	hazard.player_touched.connect(on_hazard_player_touched)
+	hazard.player_touched.connect(on_damage_source_player_touched)
+	enemy.player_touched.connect(on_damage_source_player_touched)
 
 	update_objective()
 	update_health()
@@ -48,7 +50,7 @@ func update_objective() -> void:
 		objective_label.text = "Estrelas coletadas: %d/%d" % [collected_count, collectibles.size()]
 
 
-func on_hazard_player_touched(hit_player: CharacterBody2D) -> void:
+func on_damage_source_player_touched(hit_player: CharacterBody2D) -> void:
 	if hit_player != $Player:
 		return
 

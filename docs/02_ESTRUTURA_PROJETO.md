@@ -8,12 +8,14 @@ SOFYA/
 │   ├── main.tscn
 │   ├── main_menu.tscn
 │   ├── collectible.tscn
+│   ├── enemy.tscn
 │   ├── hazard.tscn
 │   ├── level_02.tscn
 │   ├── level_exit.tscn
 │   └── player.tscn
 ├── scripts/
 │   ├── collectible.gd
+│   ├── enemy.gd
 │   ├── hazard.gd
 │   ├── level_exit.gd
 │   ├── main.gd
@@ -85,6 +87,14 @@ SOFYA/
 **Responsabilidades:** detectar a Sofya e avisar a fase sobre o dano.
 **Relacionados:** `scenes/main.tscn`, `scripts/main.gd` e `scripts/player.gd`.
 **Quando modificar:** ao ajustar área de dano, aparência ou adicionar outro tipo simples de obstáculo.
+
+### `scenes/enemy.tscn` e `scripts/enemy.gd`
+
+**Local:** `scenes/` e `scripts/`.
+**Finalidade:** disponibilizar um inimigo de patrulha simples.
+**Responsabilidades:** andar entre dois limites e causar dano pelo contato.
+**Relacionados:** `scenes/main.tscn`, `scripts/main.gd` e `scripts/player.gd`.
+**Quando modificar:** ao alterar velocidade, distância de patrulha ou criar outro tipo de inimigo.
 
 ### `scenes/player.tscn`
 

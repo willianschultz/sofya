@@ -24,6 +24,12 @@ O obstáculo atual é a cena `scenes/hazard.tscn`, formada por um `Area2D`. Arra
 
 Para que o dano funcione, conecte o sinal `player_touched` do obstáculo no script da fase. Em `main.gd`, essa conexão atualiza as vidas e reinicia a fase quando elas acabam. Isto é um obstáculo simples, não um sistema de inimigo; mantenha inimigos para uma etapa posterior.
 
+## Inimigo simples
+
+O primeiro inimigo está em `scenes/enemy.tscn`. Ele é um `Area2D` roxo que patrulha horizontalmente. No Inspector, `Patrol Speed` é sua velocidade em pixels por segundo e `Patrol Distance` é a distância máxima em pixels a partir de sua posição inicial. Ele também emite `player_touched`, portanto pode reutilizar a mesma função de dano usada pelos espinhos.
+
+Ele não persegue a Sofya, não ataca à distância e não possui animação. Esses comportamentos serão adicionados somente quando houver uma necessidade clara.
+
 ## 5. Adicionar itens
 
 O item atual é a cena reutilizável `scenes/collectible.tscn`. Ela usa um `Area2D`, portanto detecta a Sofya sem bloquear seu movimento. Para adicioná-lo, arraste `collectible.tscn` para a fase e posicione-o em um local alcançável.
