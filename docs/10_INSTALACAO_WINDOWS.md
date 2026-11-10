@@ -18,7 +18,7 @@ O instalador faz três coisas:
 2. Instala a Godot padrão, caso ela não exista.
 3. Clona o projeto em `C:\Projetos\Sofya`.
 
-Se essa pasta já for um repositório do SOFYA, o script atualiza a branch `main` usando `git pull --ff-only`. Ele para sem alterar arquivos se encontrar uma pasta comum ou alterações que não possam ser atualizadas com segurança.
+Se essa pasta já for um repositório do SOFYA, o script atualiza a branch `main` usando `git pull --ff-only`. Se a pasta existir e estiver vazia, o projeto será clonado nela. O script para sem alterar arquivos se encontrar uma pasta comum com conteúdo ou alterações que não possam ser atualizadas com segurança.
 
 ## Forma manual
 
