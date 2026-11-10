@@ -28,11 +28,13 @@ Itens coletáveis ainda não existem. Quando forem criados, use `Area2D` para de
 
 ## 6. Configurar saída
 
-A saída de fase ainda não existe. Reserve uma posição visual na fase se desejar, mas não adicione lógica de transição até a próxima etapa de desenvolvimento.
+A saída atual é a cena reutilizável `scenes/level_exit.tscn`. Ela usa um `Area2D`: ao contrário de uma plataforma, essa área detecta a Sofya sem bloqueá-la. Para adicioná-la, arraste `level_exit.tscn` do painel **Sistema de Arquivos** para a fase e posicione o portal sobre uma plataforma alcançável.
+
+Ao ser tocada, a saída mostra `Fase concluída!` e para de detectar novas entradas. Ela ainda não troca de cena nem registra progresso; essas ações serão acrescentadas apenas quando houver mais de uma fase.
 
 ## 7. Testar
 
-Salve com **Ctrl+S** e pressione **F6**. Teste saltos em cada plataforma e tente atravessar suas bordas. Para depurar formas de colisão, use **Depurar > Formas de Colisão Visíveis** enquanto o jogo estiver sendo executado.
+Salve com **Ctrl+S** e pressione **F6**. Teste saltos em cada plataforma, tente atravessar suas bordas e alcance o portal azul. A mensagem de conclusão deve aparecer uma única vez. Para depurar formas de colisão, use **Depurar > Formas de Colisão Visíveis** enquanto o jogo estiver sendo executado.
 
 ## 8. Adicionar ao mapa
 

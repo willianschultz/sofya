@@ -25,7 +25,7 @@ Use uma versão Godot 4.x. O projeto foi validado com Godot 4.6.
 
 ## Testar a fase
 
-Execute com **F6** ou **F5**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Caminhe e salte pelas três plataformas. A câmera deve acompanhar Sofya.
+Execute com **F6** ou **F5**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Caminhe e salte pelas três plataformas até alcançar o portal azul. A câmera deve acompanhar Sofya e o texto `Fase concluída!` deve aparecer ao tocar o portal.
 
 ## Onde localizar os principais arquivos
 
@@ -35,6 +35,7 @@ Execute com **F6** ou **F5**. Use `A`/seta esquerda e `D`/seta direita para anda
 | `scenes/main.tscn` | Fase principal de testes. |
 | `scenes/player.tscn` | Corpo, colisão, câmera e desenho provisório da Sofya. |
 | `scripts/player.gd` | Regras de movimento da Sofya. |
+| `scenes/level_exit.tscn` | Portal de saída usado na fase de testes. |
 | `docs/` | Guias de desenvolvimento em português. |
 
 ## Como iniciar o desenvolvimento
@@ -47,3 +48,4 @@ Abra primeiro `scenes/main.tscn`, execute-a e observe a árvore de nós à esque
 2. [02_ESTRUTURA_PROJETO.md](02_ESTRUTURA_PROJETO.md)
 3. [03_MOVIMENTACAO.md](03_MOVIMENTACAO.md)
 4. [04_CRIANDO_FASES.md](04_CRIANDO_FASES.md)
+5. [09_PROXIMAS_ETAPAS.md](09_PROXIMAS_ETAPAS.md)

@@ -6,8 +6,10 @@ SOFYA/
 ├── README.md
 ├── scenes/
 │   ├── main.tscn
+│   ├── level_exit.tscn
 │   └── player.tscn
 ├── scripts/
+│   ├── level_exit.gd
 │   └── player.gd
 └── docs/
     ├── README.md
@@ -18,7 +20,8 @@ SOFYA/
     ├── 05_INTERFACE.md
     ├── 06_SALVAMENTO.md
     ├── 07_ANDROID_IOS.md
-    └── 08_MANUTENCAO.md
+    ├── 08_MANUTENCAO.md
+    └── 09_PROXIMAS_ETAPAS.md
 ```
 
 ## Arquivos relevantes
@@ -54,6 +57,14 @@ SOFYA/
 **Responsabilidades:** ler comandos, aplicar gravidade, andar, correr, saltar e agachar.  
 **Relacionados:** `scenes/player.tscn` e `docs/03_MOVIMENTACAO.md`.  
 **Quando modificar:** ao alterar regras de movimento.
+
+### `scenes/level_exit.tscn` e `scripts/level_exit.gd`
+
+**Local:** `scenes/` e `scripts/`.
+**Finalidade:** disponibilizar e controlar o portal de saída.
+**Responsabilidades:** detectar a entrada da Sofya e mostrar uma mensagem de conclusão.
+**Relacionados:** `scenes/main.tscn` e `docs/04_CRIANDO_FASES.md`.
+**Quando modificar:** ao ajustar posição, aparência ou a ação que deverá ocorrer ao concluir uma fase.
 
 ### `docs/`
 

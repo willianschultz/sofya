@@ -1,6 +1,6 @@
 # Interface
 
-A interface atual é propositalmente pequena: o nó `Interface` em `scenes/main.tscn` é um `CanvasLayer` que contém o `Label` `Instructions`. `CanvasLayer` mantém o texto fixo na tela mesmo quando a câmera se move.
+A interface atual é propositalmente pequena: o nó `Interface` em `scenes/main.tscn` é um `CanvasLayer` que contém o `Label` `Instructions`. `CanvasLayer` mantém o texto fixo na tela mesmo quando a câmera se move. A confirmação `Fase concluída!` fica no portal em `scenes/level_exit.tscn`, pois pertence à saída da fase.
 
 ## Alterar textos e posição
 

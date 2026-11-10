@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/level_exit.gd" id="1_script"]
+
+[sub_resource type="RectangleShape2D" id="ExitShape"]
+size = Vector2(44, 64)
+
+[node name="LevelExit" type="Area2D"]
+script = ExtResource("1_script")
+
+[node name="Portal" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-22, -32, 22, -32, 22, 32, -22, 32)
+color = Color(0.22, 0.72, 0.95, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ExitShape")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -32.0
+offset_top = -56.0
+theme_override_colors/font_color = Color(0.75, 0.94, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "SAÍDA"
+
+[node name="CompletedLabel" type="Label" parent="."]
+offset_left = -88.0
+offset_top = -88.0
+theme_override_colors/font_color = Color(1, 0.91, 0.4, 1)
+theme_override_font_sizes/font_size = 18
+text = "Fase concluída!"
+visible = false
