@@ -27,7 +27,7 @@ Para Windows, siga o guia detalhado em [10_INSTALACAO_WINDOWS.md](10_INSTALACAO_
 
 ## Testar a fase
 
-Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Na fase 1, colete as três estrelas douradas para liberar o portal azul. O contador no alto da tela deve passar de `0/3` para `3/3`. Evite os espinhos vermelhos e o inimigo roxo que patrulha o chão: cada contato remove uma vida e devolve Sofya ao início. Após um segundo no portal, a fase 2 deve abrir. Alcance o portal azul da fase 2 para ver `Fase concluída!`. Feche e abra o jogo depois de chegar à fase 2: o botão **Continuar** deve abrir a fase 2.
+Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esquerda e `D`/seta direita para andar, `Shift` para correr, `Espaço` para saltar e `S`/seta para baixo para agachar. Na fase 1, colete as três estrelas douradas para liberar o portal azul. O contador no alto da tela deve passar de `0/3` para `3/3`. Evite os espinhos vermelhos e o inimigo roxo que patrulha o chão: cada contato remove uma vida e devolve Sofya ao início. A fase 2 também possui duas estrelas, espinhos e inimigo; colete-as para liberar seu portal e concluir a demonstração. Feche e abra o jogo depois de chegar à fase 2: o botão **Continuar** deve abrir a fase 2.
 
 ## Onde localizar os principais arquivos
 

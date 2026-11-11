@@ -4,7 +4,7 @@ O SOFYA salva somente o último progresso alcançado. Ao atravessar o portal da 
 
 ## Onde está a implementação
 
-O script global `scripts/save_manager.gd` está configurado como **Autoload** em `project.godot`. Isso significa que a Godot cria um único `SaveManager` para todo o jogo. O script `scripts/main.gd`, ligado à primeira cena, pergunta a esse gerenciador qual fase deve abrir.
+O script global `scripts/save_manager.gd` está configurado como **Autoload** em `project.godot`. Isso significa que a Godot cria um único `SaveManager` para todo o jogo. O script `scripts/main_menu.gd`, ligado à tela inicial, pergunta a esse gerenciador qual fase deve abrir ao clicar em **Continuar**.
 
 ## Onde os dados são armazenados
 

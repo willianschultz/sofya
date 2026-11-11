@@ -18,7 +18,7 @@ SOFYA/
 │   ├── enemy.gd
 │   ├── hazard.gd
 │   ├── level_exit.gd
-│   ├── main.gd
+│   ├── level_controller.gd
 │   ├── main_menu.gd
 │   ├── player.gd
 │   └── save_manager.gd
@@ -77,7 +77,7 @@ SOFYA/
 **Local:** `scenes/` e `scripts/`.
 **Finalidade:** representar um item que a Sofya pode coletar.
 **Responsabilidades:** detectar a Sofya, emitir o sinal `collected` e desaparecer após a coleta.
-**Relacionados:** `scenes/main.tscn`, `scripts/main.gd` e `docs/04_CRIANDO_FASES.md`.
+**Relacionados:** `scenes/main.tscn`, `scripts/level_controller.gd` e `docs/04_CRIANDO_FASES.md`.
 **Quando modificar:** ao adicionar tipos de item ou alterar o efeito de uma coleta.
 
 ### `scenes/hazard.tscn` e `scripts/hazard.gd`
@@ -85,7 +85,7 @@ SOFYA/
 **Local:** `scenes/` e `scripts/`.
 **Finalidade:** representar um obstáculo de contato, atualmente os espinhos.
 **Responsabilidades:** detectar a Sofya e avisar a fase sobre o dano.
-**Relacionados:** `scenes/main.tscn`, `scripts/main.gd` e `scripts/player.gd`.
+**Relacionados:** `scenes/main.tscn`, `scripts/level_controller.gd` e `scripts/player.gd`.
 **Quando modificar:** ao ajustar área de dano, aparência ou adicionar outro tipo simples de obstáculo.
 
 ### `scenes/enemy.tscn` e `scripts/enemy.gd`
@@ -93,7 +93,7 @@ SOFYA/
 **Local:** `scenes/` e `scripts/`.
 **Finalidade:** disponibilizar um inimigo de patrulha simples.
 **Responsabilidades:** andar entre dois limites e causar dano pelo contato.
-**Relacionados:** `scenes/main.tscn`, `scripts/main.gd` e `scripts/player.gd`.
+**Relacionados:** `scenes/main.tscn`, `scripts/level_controller.gd` e `scripts/player.gd`.
 **Quando modificar:** ao alterar velocidade, distância de patrulha ou criar outro tipo de inimigo.
 
 ### `scenes/player.tscn`
@@ -112,13 +112,21 @@ SOFYA/
 **Relacionados:** `scenes/player.tscn` e `docs/03_MOVIMENTACAO.md`.  
 **Quando modificar:** ao alterar regras de movimento.
 
-### `scripts/main.gd` e `scripts/save_manager.gd`
+### `scripts/level_controller.gd`
 
 **Local:** `scripts/`.
-**Finalidade:** abrir o último progresso e guardar a fase desbloqueada.
-**Responsabilidades:** `main.gd` consulta o progresso ao iniciar; `save_manager.gd` lê e grava o arquivo JSON.
-**Relacionados:** `project.godot`, `scenes/main.tscn`, `scripts/level_exit.gd` e `docs/06_SALVAMENTO.md`.
-**Quando modificar:** ao adicionar novos dados persistentes ou mudar a forma de iniciar o jogo.
+**Finalidade:** concentrar regras comuns das fases jogáveis.
+**Responsabilidades:** contar estrelas, liberar o portal, atualizar vidas e tratar dano de espinhos e inimigos.
+**Relacionados:** `scenes/main.tscn`, `scenes/level_02.tscn`, `scripts/collectible.gd`, `scripts/hazard.gd` e `scripts/enemy.gd`.
+**Quando modificar:** ao criar uma regra comum a todas as fases atuais.
+
+### `scripts/save_manager.gd`
+
+**Local:** `scripts/`.
+**Finalidade:** guardar e recuperar a fase desbloqueada.
+**Responsabilidades:** ler e gravar o arquivo JSON de progresso.
+**Relacionados:** `project.godot`, `scripts/main_menu.gd` e `docs/06_SALVAMENTO.md`.
+**Quando modificar:** ao adicionar novos dados persistentes.
 
 ### `scenes/level_exit.tscn` e `scripts/level_exit.gd`
 
