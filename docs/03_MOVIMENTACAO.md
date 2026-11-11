@@ -38,7 +38,7 @@ O salto só acontece ao pressionar Espaço, com Sofya no chão e em pé. `jump_v
 
 ## Agachamento
 
-Manter `S` ou seta para baixo reduz o retângulo visual e a forma de colisão. Ao soltar o comando, o `RayCast2D` chamado `HeadClearance` verifica se existe algo acima. Se houver teto, Sofya permanece agachada e não atravessa a colisão ao levantar.
+Manter `S` ou seta para baixo reduz a arte visual e a forma de colisão. Ao soltar o comando, o `RayCast2D` chamado `HeadClearance` verifica se existe algo acima. Se houver teto, Sofya permanece agachada e não atravessa a colisão ao levantar.
 
 ```gdscript
 elif not head_clearance.is_colliding():

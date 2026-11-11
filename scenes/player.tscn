@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/player_sofya.svg" id="2_texture"]
 
 [sub_resource type="RectangleShape2D" id="PlayerShape"]
 size = Vector2(32, 48)
@@ -8,9 +9,9 @@ size = Vector2(32, 48)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_script")
 
-[node name="Visual" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)
-color = Color(0.95, 0.49, 0.68, 1)
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("2_texture")
+scale = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("PlayerShape")

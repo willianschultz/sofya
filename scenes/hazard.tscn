@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/hazard.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/spikes.svg" id="2_texture"]
 
 [sub_resource type="RectangleShape2D" id="HazardShape"]
 size = Vector2(70, 28)
@@ -8,9 +9,9 @@ size = Vector2(70, 28)
 [node name="Hazard" type="Area2D"]
 script = ExtResource("1_script")
 
-[node name="Visual" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-35, 14, -23, -14, -11, 14, 1, -14, 13, 14, 25, -14, 35, 14)
-color = Color(0.92, 0.28, 0.32, 1)
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("2_texture")
+scale = Vector2(0.75, 0.75)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("HazardShape")

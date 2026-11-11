@@ -15,7 +15,7 @@ extends Area2D
 @export var saves_next_scene: bool = true
 
 @onready var completed_label: Label = $CompletedLabel
-@onready var portal: Polygon2D = $Portal
+@onready var portal: Sprite2D = $Portal
 @onready var label: Label = $Label
 
 var is_completed: bool = false
@@ -51,8 +51,8 @@ func unlock() -> void:
 
 func update_lock_visual() -> void:
 	if is_locked:
-		portal.color = Color(0.35, 0.4, 0.48, 1)
+		portal.modulate = Color(0.55, 0.55, 0.6, 1)
 		label.text = "BLOQUEADA"
 	else:
-		portal.color = Color(0.22, 0.72, 0.95, 1)
+		portal.modulate = Color.WHITE
 		label.text = "SAÍDA"

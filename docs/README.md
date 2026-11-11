@@ -1,6 +1,6 @@
 # SOFYA — guia inicial
 
-SOFYA é um jogo de plataforma 2D. A primeira entrega contém uma fase curta de testes e uma Sofya representada por um retângulo rosa. O retângulo é proposital: permite validar controles e colisões antes de investir em arte e animações.
+SOFYA é um jogo de plataforma 2D. O protótipo atual contém duas fases curtas, objetivos, inimigos e uma Sofya em arte vetorial provisória. Essa arte dá identidade ao protótipo, mas poderá ser substituída por sprites definitivos depois que a jogabilidade for aprovada.
 
 ## Tecnologia
 
@@ -38,10 +38,11 @@ Execute com **F5**. Na tela inicial, clique em **Novo jogo**. Use `A`/seta esque
 | `scenes/demo_complete.tscn` | Tela exibida ao concluir a segunda fase. |
 | `scenes/main.tscn` | Fase principal de testes. |
 | `scenes/level_02.tscn` | Segunda fase curta, aberta pelo portal da primeira. |
-| `scenes/player.tscn` | Corpo, colisão, câmera e desenho provisório da Sofya. |
+| `scenes/player.tscn` | Corpo, colisão, câmera e arte provisória da Sofya. |
 | `scripts/player.gd` | Regras de movimento da Sofya. |
 | `scripts/save_manager.gd` | Salvamento do último progresso de fase. |
 | `scripts/main_menu.gd` | Ações da tela inicial. |
+| `assets/` | Arte vetorial provisória usada pelas cenas. |
 | `scenes/level_exit.tscn` | Portal de saída usado na fase de testes. |
 | `scenes/collectible.tscn` | Item coletável usado para liberar o portal da fase 1. |
 | `scenes/hazard.tscn` | Espinhos que removem uma vida ao toque. |

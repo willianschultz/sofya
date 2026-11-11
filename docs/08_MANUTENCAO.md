@@ -7,7 +7,7 @@
 | Mudar velocidade ou corrida | Nó `Player` em `scenes/player.tscn`, no Inspector. |
 | Alterar gravidade | **Projeto > Configurações do Projeto > Física > 2D > Default Gravity**. |
 | Ajustar salto | `Jump Velocity` no Inspector do Player. |
-| Trocar o sprite | Substitua o `Polygon2D` `Visual` em `player.tscn` por `Sprite2D`; mantenha a colisão. |
+| Trocar o sprite | Selecione `Visual` em `player.tscn`, altere a textura e mantenha a colisão. |
 | Adicionar animação | Crie `AnimatedSprite2D` ou `AnimationPlayer` após definir os sprites disponíveis. |
 | Criar inimigo | Etapa futura: comece com uma cena simples, colisão e uma regra de movimento testável. |
 | Alterar vida | Etapa futura: crie primeiro a regra de dano, depois a interface e por fim o salvamento se necessário. |

@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/level_exit.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/portal.svg" id="2_texture"]
 
 [sub_resource type="RectangleShape2D" id="ExitShape"]
 size = Vector2(44, 64)
@@ -8,9 +9,9 @@ size = Vector2(44, 64)
 [node name="LevelExit" type="Area2D"]
 script = ExtResource("1_script")
 
-[node name="Portal" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-22, -32, 22, -32, 22, 32, -22, 32)
-color = Color(0.22, 0.72, 0.95, 1)
+[node name="Portal" type="Sprite2D" parent="."]
+texture = ExtResource("2_texture")
+scale = Vector2(0.6, 0.6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("ExitShape")

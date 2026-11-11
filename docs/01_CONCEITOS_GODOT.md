@@ -30,7 +30,7 @@ Uma colisão tem um corpo físico e uma forma. Cada plataforma é um `StaticBody
 
 ## CollisionShape2D
 
-`CollisionShape2D` descreve a forma invisível usada nos cálculos físicos. O retângulo visual rosa não é a colisão por si só: o filho `CollisionShape2D` é. Isto permite trocar o desenho sem alterar a física.
+`CollisionShape2D` descreve a forma invisível usada nos cálculos físicos. A arte vetorial da Sofya não é a colisão por si só: o filho `CollisionShape2D` é. Isto permite trocar o desenho sem alterar a física.
 
 ## Resources
 

@@ -25,7 +25,7 @@ extends CharacterBody2D
 @export var max_health: int = 3
 
 @onready var body_collision: CollisionShape2D = $CollisionShape2D
-@onready var visual: Polygon2D = $Visual
+@onready var visual: Sprite2D = $Visual
 @onready var head_clearance: RayCast2D = $HeadClearance
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -88,7 +88,7 @@ func set_crouching(should_crouch: bool) -> void:
 	# Mantém os pés na mesma posição ao mudar a altura do corpo.
 	shape.size.y = body_height
 	body_collision.position.y = (standing_height - body_height) / 2.0
-	visual.scale.y = body_height / standing_height
+	visual.scale = Vector2(0.5, 0.5 * body_height / standing_height)
 	visual.position.y = (standing_height - body_height) / 2.0
 
 

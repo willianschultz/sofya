@@ -4,6 +4,12 @@
 SOFYA/
 ├── project.godot
 ├── README.md
+├── assets/
+│   ├── enemy.svg
+│   ├── player_sofya.svg
+│   ├── portal.svg
+│   ├── spikes.svg
+│   └── star.svg
 ├── scenes/
 │   ├── demo_complete.tscn
 │   ├── main.tscn
@@ -110,9 +116,17 @@ SOFYA/
 
 **Local:** `scenes/`.  
 **Finalidade:** definir a estrutura visual e física da Sofya.  
-**Responsabilidades:** reunir corpo, retângulo provisório, colisão, câmera e verificação acima da cabeça.  
+**Responsabilidades:** reunir corpo, arte provisória, colisão, câmera e verificação acima da cabeça.  
 **Relacionados:** `scripts/player.gd`.  
 **Quando modificar:** ao trocar o sprite, a câmera ou a forma física.
+
+### `assets/`
+
+**Local:** raiz do projeto.
+**Finalidade:** guardar a arte vetorial provisória do protótipo.
+**Responsabilidades:** fornecer aparência para Sofya, estrelas, espinhos, inimigo e portal.
+**Relacionados:** as respectivas cenas em `scenes/`.
+**Quando modificar:** ao trocar a arte provisória por assets definitivos.
 
 ### `scripts/player.gd`
 
