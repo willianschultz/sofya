@@ -12,6 +12,7 @@ extends Area2D
 @export_file("*.tscn") var next_scene_path: String = ""
 @export var transition_delay: float = 1.0
 @export var requires_collectible: bool = false
+@export var saves_next_scene: bool = true
 
 @onready var completed_label: Label = $CompletedLabel
 @onready var portal: Polygon2D = $Portal
@@ -37,7 +38,8 @@ func on_body_entered(body: Node2D) -> void:
 	set_deferred("monitoring", false)
 
 	if not next_scene_path.is_empty():
-		SaveManager.save_last_unlocked_level(next_scene_path)
+		if saves_next_scene:
+			SaveManager.save_last_unlocked_level(next_scene_path)
 		await get_tree().create_timer(transition_delay).timeout
 		get_tree().change_scene_to_file(next_scene_path)
 

@@ -1,6 +1,6 @@
 # Salvamento
 
-O SOFYA salva somente o último progresso alcançado. Ao atravessar o portal da fase 1, o jogo registra que a fase 2 está desbloqueada. Na próxima abertura, o jogo inicia diretamente na fase 2.
+O SOFYA salva somente o último progresso alcançado. Ao atravessar o portal da fase 1, o jogo registra que a fase 2 está desbloqueada. A tela de conclusão não substitui esse progresso. Na próxima abertura, o botão **Continuar** abre diretamente a fase 2.
 
 ## Onde está a implementação
 

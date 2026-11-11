@@ -5,6 +5,7 @@ SOFYA/
 ├── project.godot
 ├── README.md
 ├── scenes/
+│   ├── demo_complete.tscn
 │   ├── main.tscn
 │   ├── main_menu.tscn
 │   ├── collectible.tscn
@@ -15,6 +16,7 @@ SOFYA/
 │   └── player.tscn
 ├── scripts/
 │   ├── collectible.gd
+│   ├── demo_complete.gd
 │   ├── enemy.gd
 │   ├── hazard.gd
 │   ├── level_exit.gd
@@ -63,6 +65,14 @@ SOFYA/
 **Responsabilidades:** iniciar jogo novo, continuar progresso salvo e solicitar confirmação antes de apagar esse progresso.
 **Relacionados:** `project.godot`, `scripts/save_manager.gd` e `docs/05_INTERFACE.md`.
 **Quando modificar:** ao alterar opções da tela inicial ou o fluxo de entrada no jogo.
+
+### `scenes/demo_complete.tscn` e `scripts/demo_complete.gd`
+
+**Local:** `scenes/` e `scripts/`.
+**Finalidade:** encerrar a demonstração de duas fases.
+**Responsabilidades:** oferecer retorno ao menu ou reinício da demonstração.
+**Relacionados:** `scenes/level_02.tscn`, `scripts/level_exit.gd` e `scripts/save_manager.gd`.
+**Quando modificar:** ao ampliar o final da demonstração ou criar uma tela de conclusão por fase.
 
 ### `scenes/level_02.tscn`
 

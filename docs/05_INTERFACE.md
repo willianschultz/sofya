@@ -12,6 +12,10 @@ A tela inicial possui três ações:
 
 Os botões e textos ficam dentro do nó `Content` de `main_menu.tscn`. O comportamento fica em `scripts/main_menu.gd`; mantenha os nomes dos nós ao reorganizar a cena, pois o script os localiza por caminho.
 
+## Tela de conclusão
+
+Ao finalizar a fase 2, `demo_complete.tscn` mostra dois botões: **Jogar novamente** apaga o progresso e volta à fase 1; **Voltar ao menu** preserva o progresso da fase 2. A tela não é salva como fase disponível, portanto **Continuar** permanece apontando para a fase 2.
+
 ## Alterar textos e posição
 
 1. Abra `scenes/main.tscn`.

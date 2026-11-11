@@ -40,7 +40,7 @@ Nas fases atuais, as estrelas douradas emitem o sinal `collected`. O script `lev
 
 A saída atual é a cena reutilizável `scenes/level_exit.tscn`. Ela usa um `Area2D`: ao contrário de uma plataforma, essa área detecta a Sofya sem bloqueá-la. Para adicioná-la, arraste `level_exit.tscn` do painel **Sistema de Arquivos** para a fase e posicione o portal sobre uma plataforma alcançável.
 
-Ao ser tocada, a saída mostra `Fase concluída!` e para de detectar novas entradas. No Inspector do nó `LevelExit`, o campo **Next Scene Path** recebe a próxima fase. Em `main.tscn`, ele aponta para `res://scenes/level_02.tscn`; após um segundo, a Godot abre essa cena. O campo **Requires Collectible** exige que um item libere o portal. Deixe o campo vazio na última fase para apenas mostrar a conclusão.
+Ao ser tocada, a saída mostra `Fase concluída!` e para de detectar novas entradas. No Inspector do nó `LevelExit`, o campo **Next Scene Path** recebe a próxima fase. Em `main.tscn`, ele aponta para `res://scenes/level_02.tscn`; após um segundo, a Godot abre essa cena. O campo **Requires Collectible** exige que um item libere o portal. O campo **Saves Next Scene** controla se a próxima cena vira o progresso salvo; deixe-o desmarcado ao abrir uma tela de conclusão, como na fase 2.
 
 ## 7. Testar
 

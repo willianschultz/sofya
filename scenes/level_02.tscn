@@ -59,6 +59,8 @@ position = Vector2(140, 400)
 [node name="Exit" parent="." instance=ExtResource("2_exit")]
 position = Vector2(730, 264)
 requires_collectible = true
+next_scene_path = "res://scenes/demo_complete.tscn"
+saves_next_scene = false
 
 [node name="CollectibleOne" parent="." instance=ExtResource("4_collectible") groups=["collectible"]]
 position = Vector2(410, 380)

@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/demo_complete.gd" id="1_script"]
+
+[node name="DemoComplete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.06, 0.16, 1)
+mouse_filter = 2
+
+[node name="Content" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 180.0
+offset_right = 796.0
+offset_bottom = 468.0
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.82, 0.23, 1)
+theme_override_font_sizes/font_size = 36
+text = "Demonstração concluída!"
+horizontal_alignment = 1
+
+[node name="Message" type="Label" parent="Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.92, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Sofya encontrou todas as estrelas desta primeira aventura."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Spacer" type="Control" parent="Content"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="Content"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Jogar novamente"
+
+[node name="MenuButton" type="Button" parent="Content"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Voltar ao menu"
+
+[connection signal="pressed" from="Content/RestartButton" to="." method="on_restart_pressed"]
+[connection signal="pressed" from="Content/MenuButton" to="." method="on_menu_pressed"]

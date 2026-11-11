@@ -4,7 +4,7 @@ Este arquivo registra a sequência de trabalho para que o projeto possa ser reto
 
 ## Estado atual
 
-A demonstração possui duas fases curtas e jogáveis, movimentação, plataformas, câmera, saída visual, estrelas, espinhos, inimigos de patrulha, vidas, salvamento da última fase desbloqueada e tela inicial. Cada fase usa o mesmo controlador simples de objetivos, dano e vidas. O portal da fase 1 abre a fase 2 e o portal final confirma a conclusão.
+A demonstração possui duas fases curtas e jogáveis, movimentação, plataformas, câmera, saída visual, estrelas, espinhos, inimigos de patrulha, vidas, salvamento da última fase desbloqueada, tela inicial e tela de conclusão. Cada fase usa o mesmo controlador simples de objetivos, dano e vidas. O portal da fase 1 abre a fase 2 e o portal final abre a conclusão.
 
 ## Próxima validação necessária
 
